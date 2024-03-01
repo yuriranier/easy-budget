@@ -20,7 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
 	{
-		path: '/easybudget',
+		path: '/easy-budget',
 		element: <Main />,
 		loader: mainLoader,
 		errorElement: <Error />,
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
 				errorElement: <Error />,
 			},
 			{
-				path: '/easybudget/budget/:id',
+				path: '/easy-budget/budget/:id',
 				element: <BudgetPage />,
 				loader: budgetLoader,
 				action: budgetAction,
@@ -46,14 +46,14 @@ const router = createBrowserRouter([
 				],
 			},
 			{
-				path: '/easybudget/expenses',
+				path: '/easy-budget/expenses',
 				element: <ExpensesPage />,
 				loader: expensesLoader,
 				action: expensesAction,
 				errorElement: <Error />,
 			},
 			{
-				path: '/easybudget/logout',
+				path: '/easy-budget/logout',
 				action: logoutAction,
 			},
 		],
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
 function App() {
 	return (
 		<div className='App'>
-			<RouterProvider router={router} basename='easybudget' />
+			<RouterProvider router={router} basename='easy-budget' />
 			<ToastContainer />
 		</div>
 	);
