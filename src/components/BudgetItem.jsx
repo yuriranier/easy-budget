@@ -24,20 +24,36 @@ function BudgetItem({ budget, showDelete = false }) {
 				<small>{formatCurrency(amount - spent)} remaining</small>
 			</div>
 			{showDelete ? (
-				<Form
-					method='post'
-					action={`/easy-budget/budget/${id}`}
-					onSubmit={(event) => {
-						if (!confirm('Are you sure you want to delete the budget?')) {
-							event.preventDefault();
-						}
-					}}
-				>
-					<button type='submit' className='btn'>
-						{'Delete Budget'}
-						<TrashIcon width={20} />{' '}
-					</button>
-				</Form>
+				<>
+					<Form
+						method='post'
+						action='delete'
+						onSubmit={(event) => {
+							if (!confirm('Are you sure you want to delete the budget?')) {
+								event.preventDefault();
+							}
+						}}
+					>
+						<button type='submit' className='btn'>
+							{'Delete Budget'}
+							<TrashIcon width={20} />{' '}
+						</button>
+					</Form>
+					<Form
+						method='post'
+						onSubmit={(event) => {
+							if (!confirm('Are you sure you want to delete the budget?')) {
+								event.preventDefault();
+							}
+						}}
+					>
+						<input type='hidden' name='_action' value='deleteBudget' />
+						<button type='submit' className='btn'>
+							{'Delete Budget OPT 2'}
+							<TrashIcon width={20} />{' '}
+						</button>
+					</Form>
+				</>
 			) : (
 				<div className='flex-sm'>
 					<Link to={`/easy-budget/budget/${id}`} className='btn'>
