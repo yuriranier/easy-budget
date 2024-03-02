@@ -40,7 +40,7 @@ function BudgetItem({ budget, showDelete = false }) {
 				</Form>
 			) : (
 				<div className='flex-sm'>
-					<Link to={`/budget/${id}`} className='btn'>
+					<Link to={`/easybudget/budget/${id}`} className='btn'>
 						<span>View Details</span> <BanknotesIcon width={20} />
 					</Link>
 				</div>

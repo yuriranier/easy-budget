@@ -107,7 +107,7 @@ const Dashboard = () => {
 												.slice(0, 3)}
 										/>
 										{expenses.length > 3 && (
-											<Link to='expenses' className='btn btn--dark'>
+											<Link to='/easybudget/expenses' className='btn btn--dark'>
 												View all expenses
 											</Link>
 										)}
