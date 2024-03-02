@@ -20,7 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
 	{
-		path: '/easy-budget',
+		path: '/easy-budget/',
 		element: <Main />,
 		loader: mainLoader,
 		errorElement: <Error />,
