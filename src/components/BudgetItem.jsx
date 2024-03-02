@@ -34,8 +34,12 @@ function BudgetItem({ budget, showDelete = false }) {
 							}
 						}}
 					>
-						<button type='submit' className='btn'>
-							{'Delete Budget '}
+						<button
+							type='submit'
+							className='btn'
+							onClick={() => (window.location.href = '/easy-budget/')}
+						>
+							{'Delete Budget'}
 							<TrashIcon width={20} />{' '}
 						</button>
 					</Form>
