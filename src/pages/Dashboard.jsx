@@ -63,7 +63,7 @@ export async function dashboardAction({ request }) {
 	}
 	if (_action === 'deleteExpense') {
 		try {
-			// create expense
+			// delete expense
 			deleteItem({
 				key: 'expenses',
 				id: values.expenseId,

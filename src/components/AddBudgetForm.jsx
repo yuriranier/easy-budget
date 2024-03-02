@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import { Form, useFetcher } from 'react-router-dom';
 
 // libraries
-import { ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid';
+import { CurrencyDollarIcon } from '@heroicons/react/24/solid';
 
 function AddBudgetForm() {
 	const fetcher = useFetcher();
@@ -52,8 +52,7 @@ function AddBudgetForm() {
 				<button type='submit' className='btn btn--dark' disabled={isSubmitting}>
 					{isSubmitting ? (
 						<>
-							<span>Adding budget</span>
-							<ClockIcon width={20} />
+							<span>Creating...</span>
 						</>
 					) : (
 						<>

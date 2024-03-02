@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 import { useFetcher } from 'react-router-dom';
 
 // Library imports
-import { ClockIcon, PlusCircleIcon } from '@heroicons/react/24/solid';
+import { PlusCircleIcon } from '@heroicons/react/24/solid';
 
 function AddExpenseForm({ budgets }) {
 	const fetcher = useFetcher();
@@ -76,8 +76,7 @@ function AddExpenseForm({ budgets }) {
 				<button type='submit' className='btn btn--dark' disabled={isSubmitting}>
 					{isSubmitting ? (
 						<>
-							<span>Adding expense</span>
-							<ClockIcon width={20} />
+							<span>Adding...</span>
 						</>
 					) : (
 						<>
