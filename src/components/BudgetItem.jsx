@@ -26,7 +26,7 @@ function BudgetItem({ budget, showDelete = false }) {
 			{showDelete ? (
 				<Form
 					method='post'
-					action='delete'
+					action={`/easy-budget/budget/${id}`}
 					onSubmit={(event) => {
 						if (!confirm('Are you sure you want to delete the budget?')) {
 							event.preventDefault();
@@ -34,7 +34,7 @@ function BudgetItem({ budget, showDelete = false }) {
 					}}
 				>
 					<button type='submit' className='btn'>
-						{' '}
+						{'Delete Budget'}
 						<TrashIcon width={20} />{' '}
 					</button>
 				</Form>
